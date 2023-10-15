@@ -17,9 +17,10 @@ aws configure
 Then, the template can be deployed as cloudformation stack using:
 ```bash
 aws cloudformation update-stack \
-  --stack-name brandon-tokyo-vpn \
+  --stack-name [yourstackname] \
   --template-body file://full-path-to-this-template-folder/VPN-template.json \
-  --tags Key=Scope,Value=vpn
+  --tags Key=[yourtag],Value=[yourtagvalue] \
+  --parameters ParameterKey=Username,ParameterValue=[yourusername] ParameterKey=VPNPassword,ParameterValue=[yourpassword] ParameterKey=VPNPhrase,ParameterValue=[yoursecretphase]
 ```
 ## License
 
